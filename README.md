@@ -30,11 +30,11 @@ The project replicates and extends the methodology of **Hathaway et al. (2025)**
 
 ### Model Performance Comparison
 
-![Model Comparison](figures/fig_09_model_comparison.png)
+![Model Comparison](fig_09_model_comparison.png)
 
 ### ROC Curve Comparison
 
-![ROC Curves](figures/fig_11_roc_curves.png)
+![ROC Curves](fig_11_roc_curves.png)
 
 ---
 
