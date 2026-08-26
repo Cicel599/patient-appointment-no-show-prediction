@@ -11,7 +11,7 @@
 
 This repository contains my MSc Research Project on predicting patient appointment no-shows using machine learning and Explainable AI (XAI).
 
-The project replicates and extends the methodology of **Hathaway et al. (2025)** by comparing **Logistic Regression**, **Random Forest**, and **XGBoost** on the publicly available **Medical Appointment No-Show** dataset. In addition to model comparison, the project investigates model explainability using **SHAP** and **LIME**, evaluates statistical significance using **McNemar's Test**, and conducts a **demographic fairness audit** across age, gender, and scholarship status.
+The project replicates and extends the methodology of **Hathaway et al. (2025)** by comparing **Logistic Regression**, **Random Forest**, and **XGBoost** on the publicly available **Medical Appointment No-Show** dataset. In addition to model comparison, the project investigates model explainability using **SHAP** and **LIME**, evaluates statistical significance using **McNemar's Test**, and conducts a demographic fairness audit across age, gender, and scholarship status.
 
 ---
 
@@ -25,15 +25,18 @@ The project replicates and extends the methodology of **Hathaway et al. (2025)**
 - Compare findings with published research.
 
 ---
+
 ## Project Visuals
 
 ### Model Performance Comparison
 
-![Model Comparison](fig_09_model_comparison.png)
+![Model Comparison](figures/fig_09_model_comparison.png)
 
 ### ROC Curve Comparison
 
-![ROC Curves](fig_11_roc_curves.png)
+![ROC Curves](figures/fig_11_roc_curves.png)
+
+---
 
 ## Dataset
 
@@ -42,16 +45,16 @@ The project replicates and extends the methodology of **Hathaway et al. (2025)**
 | **Dataset** | Medical Appointment No-Show Dataset |
 | **Source** | Kaggle (Netto, 2016) |
 | **Appointments** | 110,527 |
-| **Target Variable** | Appointment attended vs. no-show |
+| **Target Variable** | Appointment Attended vs No-Show |
 | **No-show Rate** | Approximately 20% |
 
-This is a secondary dataset widely used in healthcare machine learning research.
+This is a publicly available secondary dataset widely used in healthcare machine learning research.
 
 ---
 
 ## Project Workflow
 
-The project follows a complete end-to-end research pipeline across four notebooks.
+The project follows a complete end-to-end research pipeline across four Google Colab notebooks.
 
 | Notebook | Purpose |
 |----------|---------|
@@ -69,11 +72,11 @@ The project follows a complete end-to-end research pipeline across four notebook
 - Removed invalid records (negative ages and impossible appointment dates).
 - One-hot encoded categorical variables.
 - Applied Min-Max scaling.
-- Engineered additional features including:
+- Engineered additional features:
   - `lead_time_days`
   - `prior_noshow_ratio`
   - scheduling-related features
-- Applied **SMOTENC** to the training set only to address class imbalance while preventing data leakage.
+- Applied **SMOTENC** to the training set only after the train-test split to address class imbalance while preventing data leakage.
 
 ### Models Compared
 
@@ -169,8 +172,7 @@ The largest disparity occurred across age groups.
 
 - **Lowest FNR:** Young Adults (18–35)
 - **Highest FNR:** Older Adults (56+)
-
-The age-related FNR gap reached **0.416**, indicating substantially poorer recall for older patients.
+- **FNR Gap:** **0.416**
 
 ### Gender
 
@@ -178,7 +180,7 @@ Female and male patients showed similar FNR values, with no statistically signif
 
 ### Scholarship Status
 
-Patients with scholarship status showed lower FNR than patients without scholarship, representing an interesting socioeconomic finding within this dataset.
+Patients with scholarship status showed a lower FNR than patients without scholarship, representing an interesting socioeconomic finding within this dataset.
 
 ---
 
@@ -194,6 +196,8 @@ patient-appointment-no-show-prediction/
 │   └── Notebook_04_Demographic_Fairness_Audit.ipynb
 │
 ├── figures/
+│   ├── fig_09_model_comparison.png
+│   └── fig_11_roc_curves.png
 │
 ├── trained_models/
 │
