@@ -199,9 +199,7 @@ patient-appointment-no-show-prediction/
 │   ├── fig_09_model_comparison.png
 │   └── fig_11_roc_curves.png
 │
-├── trained_models/
-│
-├── data_processed/
+├── dataset/
 │
 ├── requirements.txt
 │
