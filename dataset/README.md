@@ -8,4 +8,5 @@
 | **Target Variable** | Appointment Attended vs No-Show |
 | **No-show Rate** | Approximately 20% |
 
-This is a publicly available secondary dataset widely used in healthcare machine learning research.
+This is a publicly available secondary dataset widely used in healthcare machine learning research. 
+https://www.kaggle.com/datasets/joniarroba/noshowappointments link to dateset
