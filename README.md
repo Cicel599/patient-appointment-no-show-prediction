@@ -196,8 +196,11 @@ patient-appointment-no-show-prediction/
 │   └── Notebook_04_Demographic_Fairness_Audit.ipynb
 │
 ├── figures/
+│   ├──fig_08_cv_auc_per_fold.png
 │   ├── fig_09_model_comparison.png
-│   └── fig_11_roc_curves.png
+│   ├── fig_11_roc_curves.png
+│   ├──fig_19_shap_vs_lime_comparison.png
+│   └──fig_21_fairness_age.png
 │
 ├── dataset/
 │
